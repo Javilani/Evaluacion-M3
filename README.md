@@ -1,14 +1,175 @@
 
 # Evaluación Módulo 3
 
+## Menú de Navegación
+1. [Manipulación de datos JSON](#manipulación-de-datos-json)  
+2. [Algoritmos y estructura de datos](#algoritmos-y-estructura-de-datos)  
+3. [Funciones, Clases y Manejo de Eventos](#funciones-clases-y-manejo-de-eventos)  
+4. [Instrucciones para Visualizar el Proyecto](#instrucciones-para-visualizar-el-proyecto)  
+
 ## Manipulación de datos JSON
 
+#### Descripción de los datos manipulados
+
+Este archivo JSON organiza información sobre el personal médico y de enfermería del Hospital Akilar. Los datos están divididos en dos categorías: doctores y enfermeros, cada uno con detalles específicos.
+
+**Categorías Principales**
+- **doctores:** Lista de médicos, con especialidades y disponibilidad.
+- **enfermeros:** Lista de enfermeros/as con experiencia y horarios.
+
+**Campos Comunes**
+- **nombre:** Nombre completo.
+- **genero:** Género ("M" o "F").
+- **rol:** Rol ("doctor" o "enfermero").
+- **especialidad:** Área de especialización.
+- **aniosExperiencia:** Años de experiencia.
+- **descripcion:** Breve biografía.
+- **img:** Ruta de la imagen.
+- **disponibilidad:** Estado (true o false).
+- **detalles:** Incluye:
+- **horarios:** Días y horas de atención.
+- **contacto:** Email y teléfono.
+
+#### Ejemplo de Uso
+ **Cargar Datos con JavaScript**
+
+        fetch('equipoMedico.json')
+            .then(response => response.json())
+            .then(data => console.log(data.doctores));
+
 ## Algoritmos y estructura de datos
+
+### Estructuras de Datos Implementadas
+
+#### Arreglos
+
+Los arreglos se utilizan para almacenar listas de pacientes y doctores en el proyecto.
+
+**Operaciones**:
+  - `push()`: Agrega pacientes o doctores al final del arreglo.
+  - `shift()`: Atiende al primer paciente, eliminándolo del inicio del arreglo.
+  - `find()` y `findIndex()`: Permiten buscar elementos específicos dentro del arreglo.
+
+**Ventaja**:
+  - Son simples de implementar y eficientes para acceso secuencial, lo que los hace ideales para manejar listas de pacientes y doctores.
+
+#### Colas
+
+Las colas se implementan utilizando arreglos para gestionar la atención de pacientes en orden.
+
+**Operaciones**:
+  - `push()`: Agrega pacientes al final de la cola.
+  - `shift()`: Atiende al primer paciente, eliminándolo de la cola.
+
+**Ventaja**:
+  - Siguen el principio FIFO (First In, First Out), lo que es ideal para simular el flujo de atención de pacientes.
+
+#### Clases
+
+La clase `Paciente` y `Doctor` encapsula la lógica para crear y gestionar pacientes como objetos, mejorando la organización y modularidad del código.
+
+**Ventaja**:
+  - Facilita la extensión y reutilización del código, permitiendo agregar nuevos métodos y propiedades relacionadas con los pacientes de forma más sencilla.
+
+### Descripción de los Algoritmos Implementados
+
+1. **Reservar Cita**
+- Descripción: Solicita y valida información del paciente (nombre, edad, correo electrónico).
+- Ejemplo de código:
+
+        function obtenerNombre() {
+            let nombre;
+            while (true) {
+                nombre = prompt("Nombre del paciente: ");
+                if (nombre.trim() !== "") return nombre;
+               alert("El nombre no puede estar vacío.");
+            }
+        }
+
+2. **Buscar Doctor**
+- Descripción: Encuentra un doctor en el arreglo basado en su nombre.
+- Ejemplo de código:
+
+        const encontrado = doctores.find(doctor => doctor.nombre.toLowerCase().includes(nombreBuscado.toLowerCase()));
+
+
+3. **Mostrar Doctores**
+- Descripción: Itera sobre el arreglo de doctores y actualiza un elemento HTML con la lista.
+- Ejemplo de código:
+
+        doctores.forEach((doctor, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Doctor ${index + 1}: Nombre: ${doctor.nombre}, Especialidad: ${doctor.especialidad}`;
+            listaElement.appendChild(listItem);
+        });
+
+
+4. **Ordenar Doctores**
+- Descripción: Ordena el arreglo de doctores por años de experiencia en orden descendente.
+- Ejemplo de código:
+
+        doctores.sort((a, b) => b.aniosExperiencia - a.aniosExperiencia);
+
+
+5. **Clonación**
+- Descripción: Realiza una copia profunda del arreglo de doctores.
+- Ejemplo de código:
+
+        const doctoresClonados = JSON.parse(JSON.stringify(data.doctores));
+
+6. **Merge**
+- Descripción: Fusiona datos de doctores y servicios médicos.
+- Ejemplo de código:
+
+        const doctoresYServicios = {
+            doctores: data.doctores,
+            servicios: servicios
+        };
 
 
 ## Funciones, Clases y Manejo de Eventos
 
 ### Funciones
+
+#### Currying
+
+El **currying** es una técnica que permite transformar una función que toma múltiples argumentos en una serie de funciones que toman un solo argumento.
+
+**Ejemplo Implementado:** La función `calcularCostoConsulta` utilizada en el archivo `appContacto.js`, implementa currying para calcular el costo total de las consultas de un paciente.
+
+        const calcularCostoConsulta = (precioConsulta) => (numeroConsultas) => precioConsulta * numeroConsultas;
+
+        // Uso:
+        const costoPorConsulta = calcularCostoConsulta(20000);
+        const costoTotal = costoPorConsulta(5); // Resultado: 100000
+
+#### Composición de funciones
+
+La **composición de funciones** combina varias funciones simples para formar una función más compleja. Esto ayuda a crear cadenas de operaciones reutilizables.
+
+**Ejemplo Implementado:** La función `compose(f, g)` toma dos funciones y las combina. La primera función (`f`) se aplica al resultado de la segunda función (`g`). En este caso, se utiliza para combinar el cálculo del costo con el descuento.
+
+        function compose(f, g) {
+                return function(x) {
+                        return f(g(x));
+                };
+        }
+
+#### Recursión
+La **recursión** se emplea para calcular de forma acumulativa un resultado al dividir un problema en subproblemas más pequeños.
+
+**Ejemplo Implementado:** La función `calcularHorasSemanalesRecursivo` implementada en `appAdmin.js` calcula de forma recursiva las horas de consulta disponibles para un doctor a lo largo de la semana.
+
+        function calcularHorasSemanalesRecursivo(horarios, dias, index = 0, total = 0) {
+                if (index >= dias.length) return total; // Caso base
+                const horasDia = horarios[dias[index]] ? calcularHoras(horarios[dias[index]]) : 0;
+                return calcularHorasSemanalesRecursivo(horarios, dias, index + 1, total + horasDia);
+        }
+
+        // Uso:
+        const horarios = { lunes: "09:00 - 13:00", miércoles: "14:00 - 18:00" };
+        const diasSemana = ["lunes", "miércoles"];
+        const totalHoras = calcularHorasSemanalesRecursivo(horarios, diasSemana); // Resultado: 8
 
 
 ### Clases
@@ -92,7 +253,6 @@ Este proyecto puede ser una base para sistemas más complejos de gestión hospit
 
         <button id="calcularCostosBtn">Calcular Costos</button>
         <div id="resultado"></div>
-
 
 
 
