@@ -1,6 +1,12 @@
 
 # Evaluación Módulo 3
 
+## Menú de Navegación
+1. [Manipulación de datos JSON](#manipulación-de-datos-json)  
+2. [Algoritmos y estructura de datos](#algoritmos-y-estructura-de-datos)  
+3. [Funciones, Clases y Manejo de Eventos](#funciones-clases-y-manejo-de-eventos)  
+4. [Instrucciones para Visualizar el Proyecto](#instrucciones-para-visualizar-el-proyecto)  
+
 ## Manipulación de datos JSON
 
 #### Descripción de los datos manipulados
@@ -32,6 +38,93 @@ Este archivo JSON organiza información sobre el personal médico y de enfermer�
             .then(data => console.log(data.doctores));
 
 ## Algoritmos y estructura de datos
+
+### Estructuras de Datos Implementadas
+
+#### Arreglos
+
+Los arreglos se utilizan para almacenar listas de pacientes y doctores en el proyecto.
+
+**Operaciones**:
+  - `push()`: Agrega pacientes o doctores al final del arreglo.
+  - `shift()`: Atiende al primer paciente, eliminándolo del inicio del arreglo.
+  - `find()` y `findIndex()`: Permiten buscar elementos específicos dentro del arreglo.
+
+**Ventaja**:
+  - Son simples de implementar y eficientes para acceso secuencial, lo que los hace ideales para manejar listas de pacientes y doctores.
+
+#### Colas
+
+Las colas se implementan utilizando arreglos para gestionar la atención de pacientes en orden.
+
+**Operaciones**:
+  - `push()`: Agrega pacientes al final de la cola.
+  - `shift()`: Atiende al primer paciente, eliminándolo de la cola.
+
+**Ventaja**:
+  - Siguen el principio FIFO (First In, First Out), lo que es ideal para simular el flujo de atención de pacientes.
+
+#### Clases
+
+La clase `Paciente` y `Doctor` encapsula la lógica para crear y gestionar pacientes como objetos, mejorando la organización y modularidad del código.
+
+**Ventaja**:
+  - Facilita la extensión y reutilización del código, permitiendo agregar nuevos métodos y propiedades relacionadas con los pacientes de forma más sencilla.
+
+### Descripción de los Algoritmos Implementados
+
+1. **Reservar Cita**
+- Descripción: Solicita y valida información del paciente (nombre, edad, correo electrónico).
+- Ejemplo de código:
+
+        function obtenerNombre() {
+            let nombre;
+            while (true) {
+                nombre = prompt("Nombre del paciente: ");
+                if (nombre.trim() !== "") return nombre;
+               alert("El nombre no puede estar vacío.");
+            }
+        }
+
+2. **Buscar Doctor**
+- Descripción: Encuentra un doctor en el arreglo basado en su nombre.
+- Ejemplo de código:
+
+        const encontrado = doctores.find(doctor => doctor.nombre.toLowerCase().includes(nombreBuscado.toLowerCase()));
+
+
+3. **Mostrar Doctores**
+- Descripción: Itera sobre el arreglo de doctores y actualiza un elemento HTML con la lista.
+- Ejemplo de código:
+
+        doctores.forEach((doctor, index) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `Doctor ${index + 1}: Nombre: ${doctor.nombre}, Especialidad: ${doctor.especialidad}`;
+            listaElement.appendChild(listItem);
+        });
+
+
+4. **Ordenar Doctores**
+- Descripción: Ordena el arreglo de doctores por años de experiencia en orden descendente.
+- Ejemplo de código:
+
+        doctores.sort((a, b) => b.aniosExperiencia - a.aniosExperiencia);
+
+
+5. **Clonación**
+- Descripción: Realiza una copia profunda del arreglo de doctores.
+- Ejemplo de código:
+
+        const doctoresClonados = JSON.parse(JSON.stringify(data.doctores));
+
+6. **Merge**
+- Descripción: Fusiona datos de doctores y servicios médicos.
+- Ejemplo de código:
+
+        const doctoresYServicios = {
+            doctores: data.doctores,
+            servicios: servicios
+        };
 
 
 ## Funciones, Clases y Manejo de Eventos
