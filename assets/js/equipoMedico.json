@@ -1,0 +1,136 @@
+{
+    "doctores": [
+        {
+            "nombre": "Dr. Carlos Méndez",
+            "especialidad": "Cardiología",
+            "aniosExperiencia": 7,
+            "descripcion": "Con más de 15 años de experiencia en el cuidado cardiovascular, el Dr. Méndez se especializa en el diagnóstico y tratamiento de enfermedades del corazón. Es conocido por su enfoque humano y su compromiso con la prevención de enfermedades a través de una vida saludable.",
+            "img": "assets/img/doctor-carlos.jpeg",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "lunes": "09:00 - 13:00",
+                    "miércoles": "14:00 - 18:00",
+                    "viernes": "09:00 - 13:00"
+                },
+                "contacto": {
+                    "email": "carlos.mendez@hospitalakilar.com",
+                    "telefono": "+56912345678"
+                }
+            }
+        },
+        {
+            "nombre": "Dra. Laura Salazar",
+            "especialidad": "Pediatría",
+            "aniosExperiencia": 10,
+            "descripcion": "La Dra. Salazar ha dedicado su carrera a la salud infantil, brindando una atención integral y empática a sus pequeños pacientes y sus familias. Con más de 10 años de experiencia, es experta en desarrollo infantil y en el manejo de enfermedades pediátricas.",
+            "img": "assets/img/doctora-laura.avif",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "martes": "08:00 - 12:00",
+                    "jueves": "13:00 - 17:00",
+                    "sábado": "10:00 - 14:00"
+                },
+                "contacto": {
+                    "email": "laura.salazar@hospitalakilar.com",
+                    "telefono": "+56987654321"
+                }
+            }
+        },
+        {
+            "nombre": "Dra. Isabel Torres",
+            "especialidad": "Ginecología y Obstetricia",
+            "aniosExperiencia": 12,
+            "descripcion": "La Dra. Torres se dedica al cuidado integral de la salud femenina, acompañando a sus pacientes en todas las etapas de su vida. Con más de 12 años de experiencia, es reconocida por su compromiso en promover una salud ginecológica óptima y por su enfoque cálido y profesional en el área de la obstetricia.",
+            "img": "assets/img/doctora-isabel.jpg",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "martes": "10:00 - 17:00",
+                    "viernes": "9:00 - 13:00",
+                    "sábado": "08:00 - 12:00"
+                },
+                "contacto": {
+                    "email": "isabel.torres@hospitalakilar.com",
+                    "telefono": "+56943219876"
+                }
+            }
+        },
+        {
+            "nombre": "Dr. Antonio Gómez",
+            "especialidad": "Cirugía General",
+            "aniosExperiencia": 16,
+            "descripcion": "El Dr. Gómez cuenta con una amplia trayectoria en cirugía general y mínimamente invasiva. Su habilidad técnica y su precisión han sido fundamentales para el éxito de muchas intervenciones quirúrgicas. Su prioridad es garantizar la seguridad y la rápida recuperación de sus pacientes.",
+            "img": "assets/img/doctor-antonio.webp",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "lunes": "12:00 - 18:00",
+                    "martes": "09:00 - 15:00",
+                    "jueves": "12:00 - 18:00"
+                },
+                "contacto": {
+                    "email": "antonio.gomez@hospitalakilar.com",
+                    "telefono": "+56987651234"
+                }
+            }
+        }
+    ],
+    "enfermeros": [
+        {
+            "nombre": "Enf. María López",
+            "especialidad": "Enfermería",
+            "aniosExperiencia": 8,
+            "descripcion": "La enfermera María López se ha especializado en el cuidado de niños y adolescentes, brindando apoyo tanto a los pequeños pacientes como a sus familias durante su tratamiento.",
+            "img": "assets/img/enfermera-maria.webp",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "lunes": "08:00 - 14:00",
+                    "miércoles": "10:00 - 16:00"
+                },
+                "contacto": {
+                    "email": "maria.lopez@hospitalakilar.com",
+                    "telefono": "+56923456789"
+                }
+            }
+        },
+        {
+            "nombre": "Enf. Pedro Ramos",
+            "especialidad": "Enfermería",
+            "aniosExperiencia": 15,
+            "descripcion": "Pedro Ramos es un enfermero con una gran trayectoria en el manejo de situaciones críticas y de urgencia. Con más de 15 años de experiencia en el área de emergencias, Pedro ha trabajado en múltiples unidades de cuidados intensivos, atendiendo a pacientes en condiciones críticas y apoyando a los médicos en intervenciones urgentes.",
+            "img": "assets/img/enfermero-pedro.jpg",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "martes": "08:00 - 14:00",
+                    "viernes": "10:00 - 16:00"
+                },
+                "contacto": {
+                    "email": "pedro.ramos@hospitalakilar.com",
+                    "telefono": "+56998765432"
+                }
+            }
+        },
+        {
+            "nombre": "Enf. Ana Gómez",
+            "especialidad": "Cuidado Intensivo",
+            "aniosExperiencia": 10,
+            "descripcion": "Con años de experiencia en unidades de cuidados intensivos, la enfermera Ana Gómez es conocida por su dedicación y habilidad en el manejo de situaciones críticas, brindando apoyo y atención especializada a pacientes en estado grave.",
+            "img": "assets/img/enfermera-ana.webp",
+            "disponibilidad": true,
+            "detalles": {
+                "horarios": {
+                    "jueves": "08:00 - 15:00",
+                    "sábado": "12:00 - 18:00"
+                },
+                "contacto": {
+                    "email": "ana.gomez@hospitalakilar.com",
+                    "telefono": "+56923459876"
+                }
+            }
+        }
+    ]
+}

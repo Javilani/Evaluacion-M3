@@ -1,0 +1,17 @@
+@use '../abstracts/variables' as *;
+
+.adminBody {
+    height: 80vh;
+    font-family: $font-stack;
+    margin: 20px;
+}
+
+button {
+    font-family: $font-stack;
+    padding: 10px 15px;
+    background-color: $light-color;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}

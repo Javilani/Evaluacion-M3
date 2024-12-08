@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio-2-modulo-2---front-end",
+  "version": "1.0.0",
+  "description": "Este es un proyecto de una página web para el hospital Akilar, diseñado con HTML y CSS. El sitio web presenta información básica del hospital, incluyendo una página de bienvenida, detalles sobre el equipo médico y una sección de contacto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}

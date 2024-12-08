@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Hospital Akilar</title>
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="header__navbar">
+            <img class="header__nav-logo" src="assets/img/Logo-hospital.jpg" alt="Logo hospital">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-a" href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="equipoMedico.html">Equipo Médico</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="administrador.html">Administrador</a></li>
+            </ul>
+            <button class="header__nav-btn" onclick="reservarCita()">Reservar Cita</button>
+        </nav>
+    </header>
+
+    <div class="bvn-misvis">
+        <div class="bvn-misvis__bienvenida">
+            <img class="bvn-misvis__img-hospital" src="assets/img/hospital.jpg" alt="Foto del hospital Akilar">
+            <div class="bvn-misvis__texto">
+                <h1>Hospital Akilar</h1>
+                <p>Bienvenidos a Akilar, donde su salud y bienestar son nuestra prioridad. Nos comprometemos a brindarle atención médica de calidad con un equipo profesional, cálido y dedicado a mejorar su calidad de vida. Su salud está en buenas manos.</p>
+            </div>
+        </div>
+    
+        <div class="bvn-misvis__mis-vis">
+                <div class="bvn-misvis__card">
+                    <h2>Misión</h2>
+                    <p>Nuestra misión es ofrecer servicios médicos integrales, accesibles y de alta calidad, apoyados en la innovación tecnológica y el compromiso humano. Trabajamos día a día para mejorar la vida de nuestros pacientes, promoviendo una atención personalizada y segura.</p>
+                </div>
+                <div class="bvn-misvis__card">
+                    <h2>Visión</h2>
+                    <p>Ser un hospital de referencia en la región, reconocido por su excelencia médica, atención centrada en el paciente y el continuo desarrollo de nuestros profesionales, contribuyendo al bienestar y la salud de nuestra comunidad.</p>
+                </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="servicios">
+            <h2>Servicios</h2>
+            <div class="servicios__serv-med">
+                <div class="servicios__card">
+                    <img src="assets/img/consultas.png" alt="icono consultas médicas" width="150px">
+                    <h3>Consultas</h3>
+                    <p>En Akilar, ofrecemos consultas médicas con profesionales altamente capacitados en diversas áreas de la salud. Nuestros médicos están comprometidos a brindarle atención personalizada, diagnóstico preciso y un plan de tratamiento adecuado a sus necesidades. Ya sea para chequeos regulares o problemas de salud específicos, estamos aquí para ayudarle.</p>
+                </div>
+                <div class="servicios__card">
+                    <img src="assets/img/urgencias.png" alt="icono urgencias" width="150px">
+                    <h3>Urgencias</h3>
+                    <p>Nuestro servicio de urgencias está disponible las 24 horas del día, los 7 días de la semana, para atender situaciones críticas y emergencias médicas. Contamos con un equipo especializado y tecnología avanzada para proporcionar una atención rápida y efectiva en momentos de necesidad. Su salud y seguridad son nuestra prioridad en cada emergencia.</p>
+                </div>
+                <div class="servicios__card">
+                    <img src="assets/img/especialidades.png" alt="icono especialidades" width="150px">
+                    <h3>Especialidades</h3>
+                    <p>En este hospital ofrecemos una amplia gama de servicios en especialidades médicas, que incluyen cardiología, pediatría, ginecología, ortopedia, y más. Nuestros especialistas están dedicados a proporcionar un enfoque integral y personalizado para el tratamiento de condiciones específicas, asegurando la mejor atención para cada paciente.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="test">
+            <h2>Testimonios</h2>
+            <div class="test__testimonios">
+                <div class="test__card">
+                    <h4>Rodrigo Salazar</h4>
+                    <p><em>La atención que recibí fue excepcional. Los profesionales no solo son expertos, sino que también muestran un gran compromiso humano. Gracias por cuidar de mí.</em></p>
+                </div>
+                <div class="test__card">
+                    <h4>María Hidalgo</h4>
+                    <p><em>El equipo médico de Akilar fue increíble. Me sentí apoyado y cuidado en cada paso de mi tratamiento. ¡Recomiendo este lugar a todos!</em></p>
+                </div>
+                <div class="test__card">
+                    <h4>Isabel Poblete</h4>
+                    <p><em>Estuve muy nerviosa antes de mi cirugía, pero el personal del hospital me tranquilizó y me hizo sentir como en casa. Estoy muy agradecida por su dedicación.</em></p>
+                </div>
+            </div>
+    
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logos">
+            <a href="https://www.instagram.com/"><img src="assets/img/instagram.png" alt="logo instagram" width="40px"></a>
+            <a href="https://es-la.facebook.com/"><img src="assets/img/facebook.png" alt="logo facebook" width="40px" style="border-radius: 8px;"></a>
+        </div>
+        <div class="footer__info">
+            <p>La dirección del hospital</p>
+            <p>hospitalakilar@mail.com</p>
+            <p>+56912345678</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

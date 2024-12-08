@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styleContacto.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar">
+            <img class="header__nav-logo" src="assets/img/Logo-hospital.jpg" alt="Logo hospital">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-a" href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="equipoMedico.html">Equipo Médico</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="administrador.html">Administrador</a></li>
+            </ul>
+            <button class="header__nav-btn" onclick="reservarCita()">Reservar Cita</button>
+        </nav>
+    </header>
+
+    <div class="adminBody">
+        <h2>Pacientes</h2>
+        <button id="btnAgregarPaciente" class="btn-paciente">Agregar Paciente</button>
+        <button class="btn-paciente" onclick="atenderPaciente()">Atender Paciente</button>
+        <button class="btn-paciente" onclick="verColaPacientes()">Ver Cola de Pacientes</button>
+        <button id="calcularCostosBtn" class="btn-paciente">Calcular costos de servicios</button>
+        <button id="calcularPromedioBtn" class="btn-paciente">Calcular Promedio de Espera</button>
+        <h2>Gestión de Pacientes y Costos</h2>
+        <p id="resultado"></p>
+        <p id="resultadoPromedio"></p>
+        <div id="resultadoPacientes"></div>
+    </div>
+
+
+
+    <main>
+
+        <div>
+            <h3>Encuéntranos aquí</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4271.330026239199!2d-71.43598546889169!3d-33.05276364033688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689d8fff63d8b57%3A0xb46b65ef578cf8f9!2sHospital%20de%20Quilpu%C3%A9!5e0!3m2!1ses!2scl!4v1729904593618!5m2!1ses!2scl"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div>
+            <h2>Contáctanos</h2>
+            <form class="form">
+                <label>Nombre:</label>
+                <input class="form__input" type="text" name="nombre" placeholder="Ej: Juan Perez">
+                <br>
+                <label>Correo Electrónico:</label>
+                <input class="form__input" type="email" name="email" placeholder="Ej: juanperez@mail.com">
+                <br>
+                <label>Asunto:</label>
+                <input class="form__input" type="text" name="asunto" placeholder="Ej: Felicitaciones">
+                <br>
+                <label>Mensaje:</label>
+                <textarea class="form__textarea" name="mensaje" rows="4"
+                    placeholder="Escribe tu mensaje aquí"></textarea>
+                <br>
+                <button class="form__btn-msg" type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logos">
+            <a href="https://www.instagram.com/"><img src="assets/img/instagram.png" alt="logo instagram"
+                    width="40px"></a>
+            <a href="https://es-la.facebook.com/"><img src="assets/img/facebook.png" alt="logo facebook" width="40px"
+                    style="border-radius: 8px;"></a>
+        </div>
+        <div class="footer__info">
+            <p>La dirección del hospital</p>
+            <p>hospitalakilar@mail.com</p>
+            <p>+56912345678</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/estructura.js"></script>
+    <script src="assets/js/appContacto.js"></script>
+</body>
+
+</html>

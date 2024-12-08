@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styleAdmin.css">
+    <title>Administrador</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar">
+            <img class="header__nav-logo" src="assets/img/Logo-hospital.jpg" alt="Logo hospital">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-a" href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="equipoMedico.html">Equipo Médico</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="administrador.html">Administrador</a></li>
+            </ul>
+            <button class="header__nav-btn" onclick="reservarCita()">Reservar Cita</button>
+        </nav>
+    </header>
+
+    <div class="adminBody">
+        <h1>Funciones Administrador</h1>
+        <p>PD: Para ver como funcionan algunas de las funciones, tiene que tener desplegada la consola del navegador.
+        </p>
+        <button onclick="clonarDoctores()">Clonar Doctores</button>
+        <button onclick="mergeDoctoresServicios()">Merge Doctores y Servicios</button>
+        <button onclick="recorrerDoctores()">Recorrer Doctores</button>
+        <br>
+        <button onclick="mostrarDoctores()">Mostrar Doctores</button>
+        <button onclick="agregarDoctor()">Agregar Doctor</button>
+        <button onclick="eliminarDoctor()">Eliminar Doctor</button>
+        <button onclick="ordenar()">Ordenar Doctores</button>
+        <button onclick="buscarDoctor()">Buscar Doctor</button>
+        <button onclick="mostrarHorasDoctores()">Mostrar horas disponibles</button>
+        
+        <h3>Lista de Doctores:</h3>
+        <ul id="listaDoctores"></ul>
+        <div id="resultadoHoras"></div>
+
+
+        <h2>Citas</h2>
+        <button onclick="reservarCita()">Reservar Cita</button>
+        <button onclick="verUltimaCita()">Ver Última Cita</button>
+        <button onclick="atenderCita()">Atender Cita</button>
+        <h3>Gestión de Citas:</h3>
+        <div id="resultadoCitas"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer__logos">
+            <a href="https://www.instagram.com/"><img src="assets/img/instagram.png" alt="logo instagram"
+                    width="40px"></a>
+            <a href="https://es-la.facebook.com/"><img src="assets/img/facebook.png" alt="logo facebook" width="40px"
+                    style="border-radius: 8px;"></a>
+        </div>
+        <div class="footer__info">
+            <p>La dirección del hospital</p>
+            <p>hospitalakilar@mail.com</p>
+            <p>+56912345678</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/appAdmin.js"></script>
+</body>
+
+</html>

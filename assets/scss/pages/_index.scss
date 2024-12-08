@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+
+.bvn-misvis {
+    font-family: $font-stack;
+    color: $dark-color;
+    padding: 20px;
+    text-align: justify;
+
+    &__bienvenida {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    &__img-hospital {
+        width: 400px;
+        border-radius: 10px;
+    }
+    &__texto {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    &__mis-vis {
+        display: flex;
+        gap: 30px;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+.servicios {
+    color: $dark-color;
+    font-family: $font-stack;
+
+    &__serv-med {
+        display: flex;
+        gap: 20px;
+        text-align: justify;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+.test {
+    font-family: $font-stack;
+    color: $dark-color;
+    padding-bottom: 20px;
+
+    &__testimonios {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    &__card {
+        background-color: $primary-color;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}

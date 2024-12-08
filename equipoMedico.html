@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styleEM.css">
+    <title>Equipo Médico</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__navbar">
+            <img class="header__nav-logo" src="assets/img/Logo-hospital.jpg" alt="Logo hospital">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-a" href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="equipoMedico.html">Equipo Médico</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><a class="header__nav-a" href="administrador.html">Administrador</a></li>
+            </ul>
+            <button class="header__nav-btn" onclick="reservarCita()">Reservar Cita</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="presentacion">
+            <h1>Nuestro Equipo Médico</h1>
+            <p>En nuestro hospital, nos dedicamos a ofrecer atención de salud de la más alta calidad, combinando
+                experiencia, tecnología avanzada y un equipo humano comprometido con el bienestar de nuestros pacientes.
+            </p>
+        </div>
+
+        <!-- Barra de búsqueda -->
+        <div class="busqueda">
+            <input type="text" id="input-buscar" placeholder="Buscar doctor por nombre. Ej: Dr. Carlos Méndez" />
+            <button id="btn-buscar">Buscar</button>
+        </div>
+
+        <!-- Botones para mostrar doctores o enfermeras -->
+        <div class="botones-filtro">
+            <button id="btn-doctores">Mostrar Todos los Doctores</button>
+            <button id="btn-enfermeros">Mostrar Todos los Enfermeros</button>
+        </div>
+
+        <section class="listaMedico"></section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__logos">
+            <a href="https://www.instagram.com/"><img src="assets/img/instagram.png" alt="logo instagram"
+                    width="40px"></a>
+            <a href="https://es-la.facebook.com/"><img src="assets/img/facebook.png" alt="logo facebook" width="40px"
+                    style="border-radius: 8px;"></a>
+        </div>
+        <div class="footer__info">
+            <p>La dirección del hospital</p>
+            <p>hospitalakilar@mail.com</p>
+            <p>+56912345678</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/appEM.js"></script>
+</body>
+
+</html>

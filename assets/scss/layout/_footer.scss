@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+    font-family: $font-stack;
+    background-color: $primary-color;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    color: $dark-color;
+}
+
+// Responsibidad
+
+// Para pantallas pequeñas 
+@media (max-width: $breakpoint-small) {
+    .footer {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+}
+
+// Para pantallas medianas (tablets y dispositivos similares)
+@media (min-width: $breakpoint-small) {
+    .footer {
+        padding: 15px 30px;
+    }
+}
+
+// Para pantallas grandes (laptops y dispositivos más grandes)
+@media (min-width: $breakpoint-medium) {
+    .footer {
+        padding: 20px 40px;
+    }
+}
+
+// Para pantallas extra grandes (escritorios grandes)
+@media (min-width: $breakpoint-large) {
+    .footer {
+        padding: 25px 50px;
+    }
+}
