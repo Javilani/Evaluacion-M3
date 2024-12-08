@@ -3,12 +3,80 @@
 
 ## Manipulación de datos JSON
 
+#### Descripción de los datos manipulados
+
+Este archivo JSON organiza información sobre el personal médico y de enfermería del Hospital Akilar. Los datos están divididos en dos categorías: doctores y enfermeros, cada uno con detalles específicos.
+
+**Categorías Principales**
+- **doctores:** Lista de médicos, con especialidades y disponibilidad.
+- **enfermeros:** Lista de enfermeros/as con experiencia y horarios.
+
+**Campos Comunes**
+- **nombre:** Nombre completo.
+- **genero:** Género ("M" o "F").
+- **rol:** Rol ("doctor" o "enfermero").
+- **especialidad:** Área de especialización.
+- **aniosExperiencia:** Años de experiencia.
+- **descripcion:** Breve biografía.
+- **img:** Ruta de la imagen.
+- **disponibilidad:** Estado (true o false).
+- **detalles:** Incluye:
+- **horarios:** Días y horas de atención.
+- **contacto:** Email y teléfono.
+
+#### Ejemplo de Uso
+ **Cargar Datos con JavaScript**
+
+        fetch('equipoMedico.json')
+            .then(response => response.json())
+            .then(data => console.log(data.doctores));
+
 ## Algoritmos y estructura de datos
 
 
 ## Funciones, Clases y Manejo de Eventos
 
 ### Funciones
+
+#### Currying
+
+El **currying** es una técnica que permite transformar una función que toma múltiples argumentos en una serie de funciones que toman un solo argumento.
+
+**Ejemplo Implementado:** La función `calcularCostoConsulta` utilizada en el archivo `appContacto.js`, implementa currying para calcular el costo total de las consultas de un paciente.
+
+        const calcularCostoConsulta = (precioConsulta) => (numeroConsultas) => precioConsulta * numeroConsultas;
+
+        // Uso:
+        const costoPorConsulta = calcularCostoConsulta(20000);
+        const costoTotal = costoPorConsulta(5); // Resultado: 100000
+
+#### Composición de funciones
+
+La **composición de funciones** combina varias funciones simples para formar una función más compleja. Esto ayuda a crear cadenas de operaciones reutilizables.
+
+**Ejemplo Implementado:** La función `compose(f, g)` toma dos funciones y las combina. La primera función (`f`) se aplica al resultado de la segunda función (`g`). En este caso, se utiliza para combinar el cálculo del costo con el descuento.
+
+        function compose(f, g) {
+                return function(x) {
+                        return f(g(x));
+                };
+        }
+
+#### Recursión
+La **recursión** se emplea para calcular de forma acumulativa un resultado al dividir un problema en subproblemas más pequeños.
+
+**Ejemplo Implementado:** La función `calcularHorasSemanalesRecursivo` implementada en `appAdmin.js` calcula de forma recursiva las horas de consulta disponibles para un doctor a lo largo de la semana.
+
+        function calcularHorasSemanalesRecursivo(horarios, dias, index = 0, total = 0) {
+                if (index >= dias.length) return total; // Caso base
+                const horasDia = horarios[dias[index]] ? calcularHoras(horarios[dias[index]]) : 0;
+                return calcularHorasSemanalesRecursivo(horarios, dias, index + 1, total + horasDia);
+        }
+
+        // Uso:
+        const horarios = { lunes: "09:00 - 13:00", miércoles: "14:00 - 18:00" };
+        const diasSemana = ["lunes", "miércoles"];
+        const totalHoras = calcularHorasSemanalesRecursivo(horarios, diasSemana); // Resultado: 8
 
 
 ### Clases
@@ -92,7 +160,6 @@ Este proyecto puede ser una base para sistemas más complejos de gestión hospit
 
         <button id="calcularCostosBtn">Calcular Costos</button>
         <div id="resultado"></div>
-
 
 
 
