@@ -42,10 +42,10 @@ function reservarCita() {
     // Solicitar datos
     const nombre = obtenerNombre();
     console.log(`Nombre ingresado: ${nombre}`);
-    
+
     const edad = obtenerEdad();
     console.log(`Edad ingresada: ${edad}`);
-    
+
     const email = obtenerEmail();
     console.log(`Correo ingresado: ${email}`);
 
@@ -85,6 +85,8 @@ function mostrarDoctorEspecifico(nombreDoctor) {
         // Destructuring para obtener las propiedades del doctor
         const {
             nombre,
+            genero,
+            rol,
             especialidad,
             descripcion,
             img,
@@ -94,7 +96,10 @@ function mostrarDoctorEspecifico(nombreDoctor) {
         } = doctor;
 
         // Mostrar la información en la consola
-        console.log(`Nombre: ${nombre}`);
+        const titulo = genero === "F" ? "Dra." : "Dr.";
+        const nombrecontitulo = `${titulo} ${nombre}`;
+
+        console.log(`Nombre: ${nombrecontitulo}`);
         console.log(`Especialidad: ${especialidad}`);
         console.log(`Descripción: ${descripcion}`);
         console.log(`Años de experiencia: ${aniosExperiencia}`);
@@ -111,8 +116,8 @@ function mostrarDoctorEspecifico(nombreDoctor) {
         const card = document.createElement("div");
         card.classList.add("listaMedico__item");
         card.innerHTML = `
-            <img class="listaMedico__img" src="${img}" alt="${nombre}" width="300px">
-            <h3>${nombre}</h3>
+            <img class="listaMedico__img" src="${img}" alt="${nombrecontitulo}" width="300px">
+            <h3>${nombrecontitulo}</h3>
             <h4>Especialidad: ${especialidad}</h4>
             <p>${descripcion}</p>
             <p>Años de experiencia: ${aniosExperiencia}</p>
@@ -138,11 +143,20 @@ function mostrarMiembros(filtro) {
     listaMedico.innerHTML = ""; // Limpiar contenido anterior
 
     equipoMedico[filtro].forEach((miembro) => {
+        // Determinar título basado en género
+        const titulo = miembro.rol === "enfermero"
+            ? "Enf."
+            : miembro.genero === "F"
+                ? "Dra."
+                : "Dr.";
+        const nombreConTitulo = `${titulo} ${miembro.nombre}`;
+
+        // Crear tarjeta para cada miembro
         const card = document.createElement("div");
         card.classList.add("listaMedico__item");
         card.innerHTML = `
             <img class="listaMedico__img" src="${miembro.img}" alt="${miembro.nombre}" width="300px">
-            <h3>${miembro.nombre}</h3>
+            <h3>${nombreConTitulo}</h3>
             <h4>Especialidad: ${miembro.especialidad}</h4>
             <p>${miembro.descripcion}</p>
             <p>Años de experiencia: ${miembro.aniosExperiencia}</p>
