@@ -1,3 +1,7 @@
+//
+
+
+
 // Cargar el archivo JSON
 fetch('./assets/js/equipoMedico.json')
     .then(response => response.json())
@@ -249,7 +253,19 @@ fetch('./assets/js/equipoMedico.json')
 
 
         // Pila para las citas de pacientes
-        const citas = [];
+
+
+        let citas = [];
+
+
+        fetch('./assets/js/citas.json')
+        .then(response => response.json())
+        .then(data => {
+            citas = data;
+            console.log("Citas cargadas:", citas);
+        })
+        .catch(error => console.error("Error al cargar el JSON:", error));
+
         // Función para agendar una cita
         window.reservarCita = function () {
             // Función para solicitar nombre
@@ -350,7 +366,7 @@ fetch('./assets/js/equipoMedico.json')
             resultadoDiv.innerHTML = ''; // Limpiar contenido previo
 
             if (citas.length > 0) {
-                const atendida = citas.pop();
+                const atendida = citas.shift();
                 const infoCita = `
             <p><strong>Cita atendida:</strong></p>
             <ul>

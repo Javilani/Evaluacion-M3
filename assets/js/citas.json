@@ -1,0 +1,23 @@
+[
+    {
+        "nombre":"Yolanda Ferrada",
+        "edad":29,
+        "email":"yferrada@test.cl"
+    },
+    {
+        "nombre":"Francisca Soto",
+        "edad":12,
+        "email":"papadefrancisca@test.cl"
+    },
+    {
+        "nombre":"Juan Pérez Rosales",
+        "edad":76,
+        "email":"jperez@test.cl"
+    },
+    {
+        "nombre":"Tomás Sotomayor",
+        "edad":31,
+        "email":"tsotomayor@test.cl"
+    }
+
+]

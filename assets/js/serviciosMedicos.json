@@ -1,0 +1,31 @@
+{
+    "nombreLocal": "hospital Akilar",
+    "telefono": "+56212345678",
+    "serviciosMedicos": [
+        {
+            "nombreServicio": "Cardiología",
+            "identificadorArea": "A-12",
+            "telefonoArea": "+56212344378"
+        },
+        {
+            "nombreServicio": "Pediatría",
+            "identificadorArea": "A-23",
+            "telefonoArea": "+56212340000"
+        },
+        {
+            "nombreServicio": "Ginecología y Obstetricia",
+            "identificadorArea": "A-1",
+            "telefonoArea": "+56212332132"
+        },
+        {
+            "nombreServicio": "Cirugía General",
+            "identificadorArea": "A-2",
+            "telefonoArea": "+56910435406"
+        },
+        {
+            "nombreServicio": "Cuidados Intensivos",
+            "identificadorArea": "A-9",
+            "telefonoArea": "+56943728384"
+        }
+    ]
+}
